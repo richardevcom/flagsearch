@@ -17,21 +17,21 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y shellcheck
-        shellcheck tools/flagsearch.sh
+        shellcheck flagsearch.sh
     
     - name: Basic functionality test
       run: |
-        chmod +x tools/flagsearch.sh
+        chmod +x flagsearch.sh
         # Create test directory and files
         mkdir -p test/
         echo "This is a test flag{test123}" > test/testfile.txt
         touch test/flag_file.txt
         # Test filename search
-        ./tools/flagsearch.sh -f flag -i test/ | grep -q "Found file"
+        ./flagsearch.sh -f flag -i test/ | grep -q "Found file"
         # Test content search
-        ./tools/flagsearch.sh -f flag -i test/testfile.txt | grep -q "Found flag"
+        ./flagsearch.sh -f flag -i test/testfile.txt | grep -q "Found flag"
         # Test deep search
-        ./tools/flagsearch.sh -f flag -i test/ -d | grep -q "Found flag"
+        ./flagsearch.sh -f flag -i test/ -d | grep -q "Found flag"
         
     - name: Cleanup
       run: |
