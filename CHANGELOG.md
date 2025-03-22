@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.0] - 2023-11-06
+## [1.1.0] - 2025-03-21
 
 ### Added
 - Initial public repository release
@@ -15,6 +15,4 @@ All notable changes to this project will be documented in this file.
 - Enhanced error handling
 - Updated all documentation to reflect new name
 
-## [1.0.2] - 2023-10-25
-
-# ...existing code...
+## [1.0.2] - 2025-03-19
