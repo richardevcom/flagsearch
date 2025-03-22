@@ -70,7 +70,8 @@ usage() {
 log_flag_found() {
     local type="$1"
     local file="$2"
-    local abs_path=$(realpath "$file")
+    local abs_path
+    abs_path=$(realpath "$file")
     
     if [ "$type" = "file" ]; then
         echo -e "${GREEN}[+] Found file: $abs_path${RESET}"
